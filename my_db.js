@@ -1,6 +1,7 @@
 
 
 mysql = require('mysql2');
+const cTable = require('console.table');
 
 // create the connection to database
 const connection = mysql.createConnection({
@@ -20,7 +21,8 @@ const connection = mysql.createConnection({
         const result = connection.query(sql, function(err,results){
             if (err) throw err;
          
-          console.log(results);
+          //console.log(results);
+          console.table(results[0]);
       });
    
 

@@ -1,6 +1,7 @@
 
 var express = require("express");
 const connection = require('./my_db');
+
 var app = express();
 
 
@@ -17,6 +18,7 @@ app.get('/', function(req, res){
       if (err) throw err;
    res.send(results);
     console.log(results);
+ 
 });
 });
 
